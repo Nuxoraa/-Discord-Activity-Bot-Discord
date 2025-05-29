@@ -20,7 +20,31 @@
 ## Установка
 
 ```bash
-git clone https://github.com/yourusername/discord-vscode-hours-faker.git
-cd discord-vscode-hours-faker
-pip install -r requirements.txt
+from pypresence import Presence
+import time
+
+CLIENT_ID = "123456789012345678"  # заменить на свой ID
+
+start_timestamp = time.time() - (173 * 3600 + 43 * 60)
+
+rpc = Presence(CLIENT_ID)
+rpc.connect()
+
+rpc.update(
+    state="173 часа 43 минуты без перерыва",
+    details="Visual Studio Code",
+    start=start_timestamp,
+    large_image="vscode",
+    large_text="Visual Studio Code"
+)
+
+print("Активность запущена")
+
+try:
+    while True:
+        time.sleep(15)
+except KeyboardInterrupt:
+    rpc.clear()
+    print("Активность остановлена")
+```
 
