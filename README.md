@@ -47,4 +47,7 @@ except KeyboardInterrupt:
     rpc.clear()
     print("Активность остановлена")
 ```
+- что за ID и где его взять ?
+- [![Discord Developer Portal](https://img.shields.io/badge/Discord-Developer%20Portal-5865F2?logo=discord&logoColor=white)](https://discord.com/developers/applications)
+
 
