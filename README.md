@@ -9,7 +9,7 @@ This Python script allows you to display custom Discord rich presence with infla
 ❗ Using this to artificially inflate hours may violate Discord's ToS. Use at your own risk!
 
 ## 🛠️ Installation
-```bash
+bash
 pip install pypresence
 🚀 Usage
 Make sure Discord is running
