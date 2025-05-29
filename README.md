@@ -17,7 +17,7 @@
 
 ---
 
-## Установка
+## Код На питоне 
 
 ```bash
 from pypresence import Presence
