@@ -49,5 +49,11 @@ except KeyboardInterrupt:
 ```
 - что за ID и где его взять ?
 - [![Discord Developer Portal](https://img.shields.io/badge/Discord-Developer%20Portal-5865F2?logo=discord&logoColor=white)](https://discord.com/developers/applications)
+- Создать новое приложение
+- Скопировать Client ID и вставить его в файл  в переменную CLIENT_ID
 
+
+  ## Нужные библиотеки :
+```bash
+pip install pypresence
 
