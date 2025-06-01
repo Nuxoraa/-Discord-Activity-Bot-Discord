@@ -4,8 +4,7 @@
 ![Discord RPC](https://img.shields.io/badge/Discord-Rich%20Presence-5865F2?logo=discord)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-Фейковая активность в Discord, показывающая, что пользователь работает в Visual Studio Code уже 173 часа 43 минуты. Используется официальный Discord Rich Presence API через `pypresence`.
-
+Fake activity in Discord showing that the user has been working in Visual Studio Code for 173 hours and 43 minutes. Uses the official Discord Rich Presence API via   ```pypresence```.
 ---
 
 ## Возможности
