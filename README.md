@@ -7,52 +7,54 @@
 Fake activity in Discord showing that the user has been working in Visual Studio Code for 173 hours and 43 minutes. Uses the official Discord Rich Presence API via   ```pypresence```.
 ---
 
-## Возможности
+## Features
+Shows Visual Studio Code as the active application
 
-- Показывает Visual Studio Code как активное приложение
-- Устанавливает старт активности 173 часа и 43 минуты назад ( можно заменить ниже покажу как )
-- Отображается как полноценная активность в Discord (со значком, таймером и описанием)
-- Работает на любом ПК, где установлен Discord
+Sets the start of activity to 173 hours and 43 minutes ago (you can change this below, I’ll show how)
 
+Appears as full presence in Discord (with icon, timer, and description)
+
+Works on any PC with Discord installed
 ---
 
-## Код На питоне 
+## Python Code 
 
 ```bash
 from pypresence import Presence
 import time
 
-CLIENT_ID = "123456789012345678"  # заменить на свой ID
+CLIENT_ID = "123456789012345678"  # replace with your own ID
 
-start_timestamp = time.time() - (173 * 3600 + 43 * 60) #на данном моменте вы можете поменять цифры они отвечают за количество врпеменни в игре 
+start_timestamp = time.time() - (173 * 3600 + 43 * 60) # you can change these numbers, they control how much time is shown
 
 rpc = Presence(CLIENT_ID)
 rpc.connect()
 
 rpc.update(
-    state="173 часа 43 минуты без перерыва", # далее сдсь можно поменять статус на что угодно 
-    details="Visual Studio Code",            # сдесь тоже можно поменять 
+    state="173 hours 43 minutes non-stop",  # here you can change the status to anything
+    details="Visual Studio Code",           # here too
     start=start_timestamp,            
     large_image="vscode",
-    large_text="Visual Studio Code"           # и тут тоже 
+    large_text="Visual Studio Code"         # and here as well
 )
 
-print("Активность запущена")
+print("Activity started")
 
 try:
     while True:
         time.sleep(15)
 except KeyboardInterrupt:
     rpc.clear()
-    print("Активность остановлена")
+    print("Activity stopped")
+
 ```
-- что за ID и где его взять ?
+- What is the ID and where to get it?
 - [![Discord Developer Portal](https://img.shields.io/badge/Discord-Developer%20Portal-5865F2?logo=discord&logoColor=white)](https://discord.com/developers/applications)
-- Создать новое приложение
-- Скопировать Client ID и вставить его в файл  в переменную CLIENT_ID
+- Create a new application
+- Copy the Client ID and paste it into the script in the `CLIENT_ID` variable
 
 
-  ## Нужные библиотеки :
+  ## Required libraries:
 ```bash
 pip install pypresence
 
